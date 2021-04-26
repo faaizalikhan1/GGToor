@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GG2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.js"></script>
+  </head>
+  <body>
+  <!-- banner section open -->
+  <section class="account-wrapper">
+    <div class="container">
+      <div class="account-header">
+        <h4><img src="images/ic-arrow2.png"> Manage Your Account</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="left-tabs">
+        <ul class="nav nav-pills" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="pill" href="#home">PROFILE DATA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#menu1">PERSONAL INFORMATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#menu2">ACCOUNT CREDENTIALS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#menu3">WALLET</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#menu4">SETTINGS</a>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="tabs-details">
+      <div class="tab-content">
+
+        <div id="home" class="container tab-pane active">
+          <div class="gray-wrapper">
+            <h4>1. YOUR AVATAR</h4>
+            <div class="logoContainer">
+              <img src="images/profile-placeholder.png" />
+            </div>
+            <div class="fileContainer sprite">
+              <span>UPLOAD NEW</span>
+              <input type="file" value="Choose File">
+            </div>
+          </div>
+
+          <div class="gray-wrapper">
+            <h4>2. YOUR NICKNAME</h4>
+            <div class="text-center">
+              <input type="text" placeholder="GAMER001" class="inputs" />
+              <button class="btn filled-btn">UPDATE</button>
+            </div>
+          </div>
+
+          <div class="gray-wrapper">
+            <h4>3. YOUR SOCIAL PROFILE</h4>
+            <ul class="social-profile">
+              <li>
+                <div class="details">
+                  <h6>Discord</h6>
+                  <img src="images/ic-discord.svg" />
+                </div>
+                  <input type="text" placeholder="GAMER001" class="inputs" />
+              </li>
+              <li>
+                <div class="details">
+                  <h6>Facebook</h6>
+                  <img src="images/ic-facebook.svg" />
+                </div>
+                  <input type="text" placeholder="GAMER001" class="inputs" />
+              </li>
+              <li>
+                <div class="details">
+                  <h6>Twitter</h6>
+                  <img src="images/ic-twitter.svg" />
+                </div>
+                  <input type="text" placeholder="GAMER001" class="inputs" />
+              </li>
+              <li>
+                <div class="details">
+                  <h6>Twitch</h6>
+                  <img src="images/ic-twitch.svg" />
+                </div>
+                  <input type="text" placeholder="GAMER001" class="inputs" />
+              </li>
+              <li>
+                <div class="details">
+                  <h6>Steam</h6>
+                  <img src="images/ic-stream.svg" />
+                </div>
+                  <input type="text" placeholder="GAMER001" class="inputs" />
+              </li>
+              <li>
+                <div class="details">
+                  <h6>Xbox</h6>
+                  <img src="images/ic-xbox.png" />
+                </div>
+                  <input type="text" placeholder="GAMER001" class="inputs" />
+              </li>
+            </ul>
+            <div class="text-center">
+              <button class="btn filled-btn">UPDATE</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="menu1" class="container tab-pane fade">
+          <div class="gray-wrapper">
+            <h4>YOUR PERSONAL INFORMATION</h4>
+            <form class="act-form">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label class="infolabel">First Name</label>
+                    <input type="text" placeholder="John" class="infoinputs" />
+                  </div>
+                  <div class="col-lg-6">
+                    <label class="infolabel">Last Name</label>
+                    <input type="text" placeholder="david" class="infoinputs" />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label class="infolabel">Enter Phone No.</label>
+                    <input type="text" placeholder="9988099945" class="infoinputs" />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label class="infolabel">Choose Gender</label>
+                    <select class="infoselect">
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6">
+                    <label class="infolabel">Date of Birth</label>
+                    <input type="text" placeholder="31/7/1998" class="infoselect" />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label class="infolabel">Choose Country</label>
+                    <select class="infoselect">
+                      <option>United states</option>
+                      <option>United states</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6">
+                    <label class="infolabel">Choose State</label>
+                    <select class="infoselect">
+                      <option>New york</option>
+                      <option>New york</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label class="infolabel">Enter City</label>
+                    <input type="text" placeholder="New york" class="infoinputs" />
+                  </div>
+                  <div class="col-lg-6">
+                    <label class="infolabel">Enter Zip Code</label>
+                    <input type="text" placeholder="10010" class="infoinputs" />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-12">
+                    <label class="infolabel">Enter Address</label>
+                    <textarea placeholder="House no A,block 1 ,Apartment xyz" class="textarea-account"></textarea>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+            <div class="text-center">
+              <button class="btn filled-btn">UPDATE</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="menu2" class="container tab-pane fade">
+          <div class="gray-wrapper">
+            <h4>YOUR PERSONAL INFORMATION</h4>
+            <div class="text-center">
+              <input type="email" placeholder="myemail@gmail.com" class="inputs" />
+              <button class="btn filled-btn">UPDATE</button>
+            </div>
+          </div>
+
+          <div class="gray-wrapper">
+            <h4>YOUR PERSONAL INFORMATION</h4>
+            <form class="form-info">
+            <label class="infolabel mb-4">Change Your Password</label>
+            <div class="text-center">
+              <input type="text" placeholder="Enter Your Current Password" class="inputs" />
+              <div class="clearfix"></div>
+              <input type="text" placeholder="Enter Your New Password" class="inputs" />
+              <div class="clearfix"></div>
+              <input type="text" placeholder="Confirm Your Password" class="inputs" />
+              <div class="clearfix"></div>
+              <button class="btn filled-btn">UPDATE</button>
+            </div>
+          </form>
+          </div>
+        </div>
+
+        <div id="menu3" class="container tab-pane fade">
+          <div class="gray-wrapper">
+            <h4>WALLET STATEMENT</h4>
+            <div class="padding-box">
+              <h2 class="wallet-heading">Member ID: <span>1694879303</span></h2>
+              <h2 class="wallet-heading">Name: <span>Kelvin Lopez</span></h2>
+
+              <div class="total-text">TOTAL LINE <span>|</span> SHOWING 1 OF 1 RECORDS</div>
+
+              <div class="table-wrapper padd0">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>LINE</th>
+                        <th>DATE</th>
+                        <th>DEBIT</th>
+                        <th>CREDIT</th>
+                        <th>BALANCE</th>
+                        <th>TRANSACTIONS</th>
+                        <th>REASON</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>11/10/2020</td>
+                        <td class="font-minus">-0</td>
+                        <td>0</td>
+                        <td>2020</td>
+                        <td class="font-small">NEW ACCOUNT PAYMENT</td>
+                        <td class="font-small">NEW ACCOUNT PAYMENT</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <ul class="pagination pagination-wrapper">
+                <li class="page-item"><a class="page-link" href="#">PREVIOUS</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">NEXT</a></li>
+              </ul>
+              
+            </div>
+          </div>
+        
+ 
+        </div>
+
+        <div id="menu4" class="container tab-pane fade">
+          <div class="gray-wrapper">
+            <h4>1. SUBSCRIPTIONS</h4>
+            <div class="padding-box">
+              <div class="flexbtn">
+              <p class="act-para">Choose if you want to receive are weekly newsletter</p>
+              <button type="button" class="btn btn-sm btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <div class="handle"></div>
+              </button>
+              </div>
+              </div>
+          </div>
+        
+          <div class="gray-wrapper">
+            <h4>2. MEMBERSHIP</h4>
+            <div class="padding-box">
+            <p class="act-para">
+              You have only BRONZE MEMBERSHIP you play dozens of FREE tournaments around thr year, and complete in each event for a
+              prize pool ,which may include cash, gifts, and thousands of shadow credits and remember,you can use your shadow credits
+              to pay to entry into PREMIUM tournaments buy merchandise it from our shop, and more!
+            </p>
+            <button class="btn filled-act-btn">CHANGE MEMBERSHIP</button>
+            </div>
+          </div>
+
+          <div class="gray-wrapper">
+            <h4>3. REGISTRATIONS</h4>
+            <div class="padding-box">
+              <p class="act-para">
+                we do not accept unregister or refunds 7 days prior to the event. for more information read cancellations. <span>Here</span>
+              </p>
+              <p class="act-para"><span>You are not registered for any tournament for now</span></p>
+            </div>
+          </div>
+
+          <div class="gray-wrapper">
+            <h4>4. ACCOUNT CANCELLATION</h4>
+            <div class="padding-box">
+              <p class="act-para">Here, you can delete your account</p>
+              <div class="flexbtn">
+                <button class="btn filled-act-btn">DELETE ACCOUNT</button>
+                <button class="btn outline-act-btn">DISABLE ACCOUNT</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- banner section close -->
+  <script>
+    $("input:file").change(function () {
+        var fileName = $(this).val();
+        if (fileName.length > 0) {
+          // $(this).parent().children('span').html(fileName);
+          $(this).parent().children('span').html();
+        }
+        else {
+          $(this).parent().children('span').html("Choose file");
+
+        }
+      });
+      //file input preview
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            $('.logoContainer img').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $("input:file").change(function () {
+        readURL(this);
+      });
+      </script>
+</body>
+</html>

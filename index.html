@@ -1,0 +1,924 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GG2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+  <!-- header section open -->
+  <header class="header-wrapper">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg desktopview">
+        <a href="index.html" class="navbar-brand"><img src="images/brand-logo.png" /></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav custom-ul">
+            <li clas="navbar-item">
+              <a href="index.html" class="nav-link active">HOME</a>
+            </li>
+            <li clas="navbar-item">
+              <a href="tournaments.html" class="nav-link">TOURNAMENTS</a>
+            </li>
+            <li clas="navbar-item">
+              <a href="join.html" class="nav-link">JOIN</a>
+            </li>
+            <li clas="navbar-item">
+              <a href="#" class="nav-link">SHOP</a>
+            </li>
+            <li clas="navbar-item">
+              <a href="organizer.html" class="nav-link">ORGANIZER</a>
+            </li>
+            <li clas="navbar-item">
+              <a href="#" class="nav-link">LANGUAGE</a>
+            </li>
+          </ul>
+          <div class="loginsignup">
+            <a href="" data-toggle="modal" data-target="#myModal-login">LOGIN</a>
+            |
+            <a href="" data-toggle="modal" data-target="#myModal-signup">SIGN-UP</a>
+          </div>
+          <!-- login modal open -->
+          <div class="modal" id="myModal-login">
+            <div class="modal-dialog modal-dialog-centered modal-lg custom-modal login-bg">
+              <div class="modal-content">
+          
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title title-center"></h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+          
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <div class="organizer-form">
+                    <form>
+                      <div class="custom-modal-heading">
+                        <h4><img src="images/ic-arrow2.png"> LOGIN</h4>
+                      </div>
+                      <div class="form-group">
+                        <input type="email" placeholder="Your Email or Username" class="input-global" />
+                      </div>
+                      <div class="form-group">
+                        <input type="password" placeholder="Password" class="input-global" />
+                      </div>
+                      <button type="button" class="btn btn-transparent-global" data-toggle="modal" data-target="#myModal1">Forgot password?</button>
+                      <button class="btn btn-filled-global">LOGIN</button>
+                    </form>
+                  </div>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+          <!-- login modal close -->
+          <!-- signup modal open -->
+          <div class="modal" id="myModal-signup">
+            <div class="modal-dialog modal-dialog-centered modal-lg custom-modal login-bg">
+              <div class="modal-content">
+          
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title title-center"></h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+          
+                <!-- Modal body -->
+                <div class="modal-body">
+
+
+
+                <!-- multistep form -->
+                <form id="msform">
+                  <!-- progressbar -->
+                  <ul id="progressbar">
+                    <li class="active">ACCOUNT SETUP</li>
+                    <li>PERSONAL DETAILS</li>
+                    <li>ACCOUNT DETAILS</li>
+                    <li>SECURITY</li>
+                  </ul>
+                  <!-- fieldsets -->
+
+                  
+
+                  <fieldset>
+                    <div class="custom-modal-heading">
+                      <h4><img src="images/ic-arrow2.png"> SIGN UP</h4>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="COUNTRY" class="input-global" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="DATE OF BIRTH (DD/MM/YYYY)" class="input-global" />
+                    </div>
+                    <!-- <button type="button" name="next" value="Next" class="default-btn next-step btn-filled-global">Next</button> -->
+                    <input type="button" name="next" class="next action-button btn-filled-global" value="Next" />
+                  </fieldset>
+                  
+                  <fieldset>
+                    <div class="custom-modal-heading">
+                      <h4><img src="images/ic-arrow2.png"> SIGN UP</h4>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="First name" class="input-global" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="Last name" class="input-global" />
+                    </div>
+
+                      <input type="button" name="previous" class="previous action-button btn-prev-global btnwrapper" value="Previous" />
+                      <input type="button" name="next" class="next action-button btn-filled-global btnwrapper" value="Next" />
+
+                  </fieldset>
+
+                  <fieldset>
+                    <div class="custom-modal-heading">
+                      <h4><img src="images/ic-arrow2.png"> SIGN UP</h4>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" placeholder="Your Email" class="input-global" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="Optional(Phone Number)" class="input-global" />
+                    </div>
+                    <input type="button" name="previous" class="previous action-button btn-prev-global btnwrapper" value="Previous" />
+                    <input type="button" name="next" class="next action-button btn-filled-global btnwrapper" value="Next" />
+                  </fieldset> 
+
+                  <fieldset>
+                    <div class="custom-modal-heading">
+                      <h4><img src="images/ic-arrow2.png"> SIGN UP</h4>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" placeholder="Your password" class="input-global" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="Confirm your password" class="input-global" />
+                    </div>
+                    <input type="button" name="previous" class="previous action-button btn-prev-global btnwrapper" value="Previous" />
+                    <input type="submit" name="submit" class="submit action-button btn-filled-global btnwrapper" value="Submit" />
+                  </fieldset>
+                </form>
+                
+   
+                
+
+
+
+
+
+                  <!-- <section class="signup-step-container">
+                    <div class="container">
+                      <div class="row d-flex justify-content-center">
+                        <div class="col-md-8">
+                          <div class="wizard">
+                            <div class="wizard-inner">
+                              <div class="connecting-line"></div>
+                              <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                  <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"><span
+                                      class="round-tab">1 </span> <i>ACCOUNT SETUP</i></a>
+                                </li>
+                                <li role="presentation" class="disabled">
+                                  <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"><span
+                                      class="round-tab">2</span> <i>PERSONAL DETAILS</i></a>
+                                </li>
+                                <li role="presentation" class="disabled">
+                                  <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"><span class="round-tab">3</span>
+                                    <i>ACCOUNT DETAILS</i></a>
+                                </li>
+                                <li role="presentation" class="disabled">
+                                  <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"><span class="round-tab">4</span>
+                                    <i>SECURITY</i></a>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <form role="form" action="index.html" class="login-box">
+                              <div class="tab-content" id="main_form">
+
+
+                                <div class="tab-pane active" role="tabpanel" id="step1">
+                                  <div class="organizer-form form-margin">
+                                    <form>
+                                      <div class="custom-modal-heading">
+                                        <h4><img src="images/ic-arrow2.png"> SIGN UP</h4>
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="text" placeholder="COUNTRY" class="input-global" />
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="text" placeholder="DATE OF BIRTH (DD/MM/YYYY)" class="input-global" />
+                                      </div>
+                                    </form>
+                                    <button type="button" class="default-btn next-step btn-filled-global">Next</button>
+                                  </div>
+                                </div>
+
+
+                                <div class="tab-pane" role="tabpanel" id="step2">
+                                  <div class="organizer-form form-margin">
+                                    <form>
+                                      <div class="custom-modal-heading">
+                                        <h4><img src="images/ic-arrow2.png"> SIGN UP</h4>
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="text" placeholder="First name" class="input-global" />
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="text" placeholder="Last name" class="input-global" />
+                                      </div>
+                                      <div class="d-flex">
+                                        <button type="button" class="default-btn prev-step btn-white-global mr-1">Previous</button>
+                                        <button type="button" class="default-btn next-step btn-filled-global ml-1">Next</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+
+
+                                <div class="tab-pane" role="tabpanel" id="step3">
+                                  <div class="organizer-form form-margin">
+                                    <form>
+                                      <div class="custom-modal-heading">
+                                        <h4><img src="images/ic-arrow2.png"> SIGN UP</h4>
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="email" placeholder="Your Email" class="input-global" />
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="text" placeholder="Optional(Phone Number)" class="input-global" />
+                                      </div>
+                                      <div class="d-flex">
+                                        <button type="button" class="default-btn prev-step btn-white-global mr-1">Previous</button>
+                                        <button type="button" class="default-btn next-step btn-filled-global ml-1">Next</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+
+
+                                <div class="tab-pane" role="tabpanel" id="step4">
+                                  <div class="organizer-form form-margin">
+                                    <form>
+                                      <div class="custom-modal-heading">
+                                        <h4><img src="images/ic-arrow2.png"> SIGN UP</h4>
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="email" placeholder="Your password" class="input-global" />
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="text" placeholder="Confirm your password" class="input-global" />
+                                      </div>
+                                      <div class="d-flex">
+                                        <button type="button" class="default-btn prev-step btn-white-global mr-1">Previous</button>
+                                        <button type="button" class="default-btn next-step btn-filled-global ml-1">Finish</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section> -->
+
+
+                  
+        
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- signup modal close -->
+          <!-- forgot password modal open -->
+          <div class="modal" id="myModal1">
+            <div class="modal-dialog modal-dialog-centered modal-lg custom-modal">
+              <div class="modal-content">
+          
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title title-center"><img src="images/brand-logo.png" /></h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+          
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <div class="organizer-form">
+                    <form>
+                      <h3 class="reset">Hi User,Reset Your Password</h3>
+                      <div class="form-group">
+                        <input type="password" placeholder="Enter a New Password" class="input-global" />
+                      </div>
+                      <div class="form-group">
+                        <input type="password" placeholder="Re-enter New Password" class="input-global" />
+                      </div>
+                      <button class="btn btn-filled-global">SUBMIT</button>
+                      <button class="btn btn-white-global">DISCARD,GO BACK TO LOGIN</button>
+                    </form>
+                  </div>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+          <!-- forgot password modal close -->
+
+        </div>
+      </nav>
+
+      <nav class="mobileview">
+        <div class="header-top">
+          <a href="index.html"><img src="images/brand-logo.png" class="logo" /></a>
+          <div class="show-content"><img src="images/menuicon.svg" /></div>
+        </div>
+        <div class="show-popup">
+          <span class="close"><img src="images/cancel.svg" /></span>
+          <div class="content-part">
+            <ul>
+              <li>
+                <a href="index.html" class="active">HOME</a>
+              </li>
+              <li>
+                <a href="tournaments.html">TOURNAMENTS</a>
+              </li>
+              <li>
+                <a href="join.html">JOIN</a>
+              </li>
+              <li>
+                <a href="#">SHOP</a>
+              </li>
+              <li>
+                <a href="organizer.html">ORGANIZER</a>
+              </li>
+              <li>
+                <a href="#">LANGUAGE</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- header section close -->
+  <!-- slider section open -->
+  <section class="slider-wrapper">
+    <div class="slider slider-for">
+      <div>
+        <div class="slide-box">
+          <img src="images/slider-1.jpg" />
+          <div class="img-blackbox"></div>
+          <div class="slide-txt-box">
+            <h1>THE PATH TO PRO</h1>
+            <h6>Start your Journey</h6>
+            <div class="btn-wrapper">
+              <button class="btn primary-fill-btn">SIGN UP</button>
+              <button class="btn secondary-fill-btn">SEE TOURNAMENTS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="slide-box">
+          <img src="images/slider-2.jpg" />
+          <div class="img-blackbox"></div>
+          <div class="slide-txt-box">
+            <h1>THE PATH TO PRO</h1>
+            <h6>Start your Journey</h6>
+            <div class="btn-wrapper">
+              <button class="btn primary-fill-btn">SIGN UP</button>
+              <button class="btn secondary-fill-btn">SEE TOURNAMENTS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- slider section close -->
+  <!-- tournaments heading open -->
+  <section class="heading-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="flex-heading">
+            <h2><img src="images/ic-arrow.jpeg"/> PRIME TOURNAMENTS</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tournaments heading close -->
+  <!-- tournaments section open -->
+  <section class="tournaments-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="tournament-list">
+            <li>
+              <div class="img-card">
+                <img src="images/degEr1Bv.jpg" class="img-card-banner" />
+                <span class="up-text">CALL OF DUTY : WARZONE</span>
+                <span class="down-text">
+                  <h4>4/128 <img src="images/ic-public.png" /></h4>
+                  <div class="down-text-right">
+                    <img src="images/ic-public.png" />
+                    <span>
+                      <h5>CREDITS</h5>
+                      <h6>PER PLAYER</h6>
+                    </span>
+                  </div>
+                </span>
+              </div>
+              <div class="txt-card">
+                <p>$250 PRIME | 2V2 ELIM RACE [CROSS-PLAY]</p>
+                <p>GLOBAL - 2V2 - BO1 - $250 PRIZE POOL</p>
+                <p>STARTS TODAY AT 7:00 PM EST</p>
+              </div>
+            </li>
+            <li>
+              <div class="img-card">
+                <img src="images/degEr1Bv.jpg" class="img-card-banner" />
+                <span class="up-text">CALL OF DUTY : WARZONE</span>
+                <span class="down-text">
+                  <h4>4/128 <img src="images/ic-public.png" /></h4>
+                  <div class="down-text-right">
+                    <img src="images/ic-public.png" />
+                    <span>
+                      <h5>CREDITS</h5>
+                      <h6>PER PLAYER</h6>
+                    </span>
+                  </div>
+                </span>
+              </div>
+              <div class="txt-card">
+                <p>$250 PRIME | 2V2 ELIM RACE [CROSS-PLAY]</p>
+                <p>GLOBAL - 2V2 - BO1 - $250 PRIZE POOL</p>
+                <p>STARTS TODAY AT 7:00 PM EST</p>
+              </div>
+            </li>
+            <li>
+              <div class="img-card">
+                <img src="images/degEr1Bv.jpg" class="img-card-banner" />
+                <span class="up-text">CALL OF DUTY : WARZONE</span>
+                <span class="down-text">
+                  <h4>4/128 <img src="images/ic-public.png" /></h4>
+                  <div class="down-text-right">
+                    <img src="images/ic-public.png" />
+                    <span>
+                      <h5>CREDITS</h5>
+                      <h6>PER PLAYER</h6>
+                    </span>
+                  </div>
+                </span>
+              </div>
+              <div class="txt-card">
+                <p>$250 PRIME | 2V2 ELIM RACE [CROSS-PLAY]</p>
+                <p>GLOBAL - 2V2 - BO1 - $250 PRIZE POOL</p>
+                <p>STARTS TODAY AT 7:00 PM EST</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tournaments section close -->
+  <!-- tournaments heading open -->
+  <section class="heading-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="flex-heading">
+            <h2><img src="images/ic-arrow.jpeg" /> FEATURED GAMES</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tournaments heading close -->
+  <!-- featured listing open -->
+  <section class="featured-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="slider slider-for-featured">
+            <div>
+              <div class="feturedlist">
+                <img src="images/featured-1.jpg" />
+              </div>
+            </div>
+            <div>
+              <div class="feturedlist">
+              <img src="images/featured-2.jpeg" />
+            </div>
+            </div>
+            <div>
+              <div class="feturedlist">
+              <img src="images/featured-3.jpg" />
+            </div>
+            </div>
+            <div>
+              <div class="feturedlist">
+              <img src="images/featured-4.jpg" />
+            </div>
+            </div>
+            <div>
+              <div class="feturedlist">
+              <h4><a href="">SEE ALL GAMES</a></h4>
+            </div>
+            </div>
+          </div>
+          <!-- <ul class="featured-list">
+            <li><img src="images/featured-1.jpg" /></li>
+            <li><img src="images/featured-2.jpeg" /></li>
+            <li><img src="images/featured-3.jpg" /></li>
+            <li><img src="images/featured-4.jpg" /></li>
+            <li><h4><a href="">SEE ALL GAMES</a></h4></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- featured listing close -->
+  <!-- tournaments heading open -->
+  <section class="heading-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="flex-heading">
+            <h2><img src="images/ic-arrow.jpeg" /> WINNERS</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tournaments heading close -->
+  <!-- featured listing open -->
+  <section class="featured-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="winner-list">
+            <li><img src="images/winners image.png" /></li>
+            <li><img src="images/winners image.png" /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- featured listing close -->
+  <!-- tournaments heading open -->
+  <section class="heading-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="flex-heading">
+            <h2><img src="images/ic-arrow.jpeg" /> SHORT NEWS</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tournaments heading close -->
+  <!-- featured listing open -->
+  <section class="featured-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="shortnews-list">
+            <li>
+              <div class="img-box"><img src="images/shortsnews1.png" /></div>
+              <div class="txt-box">
+                <h4>MORTAL KOMBAT MOVIE POSTER OFFERS FIRST LOOK AT KABAL</h4>
+                <p>The Mortal Kombat movie drops next month and to celebrat got a brand new.</p>
+                <a href="" class="readmore">READ MORE...</a>
+              </div>
+            </li>
+            <li>
+              <div class="img-box"><img src="images/shortnews2.png" /></div>
+              <div class="txt-box">
+                <h4>ANIMAL CROSSING: NEW HOERIZONS BUILD-A-BEAR LINE ANNOUNCED</h4>
+                <p>Animal Crossing: New Horizons has monthly updates that.</p>
+                <a href="" class="readmore">READ MORE...</a>
+              </div>
+            </li>
+            <li>
+              <div class="img-box"><img src="images/shortnews3.png" /></div>
+              <div class="txt-box">
+                <h4>OVERWATCH ADDS XBOX SERIES X OPTIMIZATION</h4>
+                <p>Fans of Overwatch have been starving for new information regarding.</p>
+                <a href="" class="readmore">READ MORE...</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-12 text-center">
+          <button class="btn-see-more">SEE MORE...</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- featured listing close -->
+  <!-- tournaments heading open -->
+  <section class="heading-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="flex-heading">
+            <h2><img src="images/ic-arrow.jpeg" /> OUR SPONSORS</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tournaments heading close -->
+  <!-- slider section open -->
+  <section class="sponsors-wrapper">
+    <div class="slider slider-for1">
+      <div>
+        <img src="images/jgex.jpg" />
+      </div>
+      <div>
+        <img src="images/jgex.jpg" />
+      </div>
+      <div>
+        <img src="images/jgex.jpg" />
+      </div>
+      <div>
+        <img src="images/jgex.jpg" />
+      </div>
+      <div>
+        <img src="images/jgex.jpg" />
+      </div>
+      <div>
+        <img src="images/jgex.jpg" />
+      </div>
+      <div>
+        <img src="images/jgex.jpg" />
+      </div>
+      <div>
+        <img src="images/jgex.jpg" />
+      </div>
+      <div>
+        <img src="images/jgex.jpg" />
+      </div>
+      <div>
+        <img src="images/jgex.jpg" />
+      </div>
+    </div>
+  </section>
+  <!-- slider section close -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="left-section">
+            <h3>THE GAMER</h3>
+            <ul>
+              <li><a href="">HOME</a></li>
+              <li><a href="">LEAGUES</a></li>
+              <li><a href="">TOURNAMENT</a></li>
+              <li><a href="">CREDITS</a></li>
+              <li><a href="">CANCELLATIONS</a></li>
+            </ul>
+
+            <h3 class="mt-5 pt-5">THE COMPANY</h3>
+            <ul>
+              <li><a href="">ABOUT US</a></li>
+              <li><a href="">CONTACT US</a></li>
+              <li><a href="">TERMS OF USE</a></li>
+              <li><a href="">PRIVACY POLICY</a></li>
+              <li><a href="">ECOC</a></li>
+            </ul>
+          </div>
+          <div class="right-section">
+            <div class="right-section-up">
+              <h1>SUBSCRIBE TO OUR NEWSLETTER</h1>
+              <span class="input-wrapper">
+                <input type="email" placeholder="Your Email" class="inputs" />
+                <button class="btn-send">Send</button>
+              </span>
+              <p>We do not sell, trade or share your information.</p>
+            </div>
+            <div class="right-section-down">
+              <h1>FOLLOW US!</h1>
+              <ul class="social-list">
+                <li><a href=""><img src="images/ic-facebook.svg" /></a></li>
+                <li><a href=""><img src="images/ic-discord.svg" /></a></li>
+                <li><a href=""><img src="images/ic-twitter.svg" /></a></li>
+                <li><a href=""><img src="images/ic-stream.svg" /></a></li>
+                <li><a href=""><img src="images/ic-youtube.svg" /></a></li>
+                <li><a href=""><img src="images/ic-twitch.svg" /></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-btm">
+      <p>This website and its content are copyright of SHADOW GAMING, INC. © 2020 - 2021 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+  $(document).ready(function () {
+    $('.nav-tabs > li a[title]').tooltip();
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      var target = $(e.target);
+      if (target.parent().hasClass('disabled')) {
+        return false;
+      }
+    });
+
+    $(".next-step").click(function (e) {
+      var active = $('.wizard .nav-tabs li.active');
+      active.next().removeClass('disabled');
+      nextTab(active);
+    });
+    $(".prev-step").click(function (e) {
+      var active = $('.wizard .nav-tabs li.active');
+      prevTab(active);
+    });
+  });
+  function nextTab(elem) {
+    $(elem).next().find('a[data-toggle="tab"]').click();
+  }
+  function prevTab(elem) {
+    $(elem).prev().find('a[data-toggle="tab"]').click();
+  }
+  $('.nav-tabs').on('click', 'li', function () {
+    $('.nav-tabs li.active').removeClass('active');
+    $(this).addClass('active');
+  });
+  </script>
+  <script>
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+       arrows: false,
+       responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false
+          }
+        }
+      ]
+    });
+
+    $('.slider-for-featured').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false
+          }
+        }
+      ]
+      });
+
+    
+    $('.slider-for1').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: false,
+      centerMode: true,
+      centerPadding: '60px',
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false
+          }
+        }
+      ]
+    });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".show-content").click(function () {
+          $(".show-popup").addClass("intro");
+        });
+      });
+      $(document).ready(function () {
+        $(".close").click(function () {
+          $(".show-popup").removeClass("intro");
+        });
+      });
+    </script>
+    <script>
+      var current_fs, next_fs, previous_fs;
+      var left, opacity, scale;
+      var animating;
+      $(".next").click(function () {
+        if (animating) return false;
+        animating = true;
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+        next_fs.show();
+        current_fs.animate(
+          { opacity: 0 },
+          {
+            step: function (now, mx) {
+              scale = 1 - (1 - now) * 0.2;
+              left = now * 50 + "%";
+              opacity = 1 - now;
+              current_fs.css({ transform: "scale(" + scale + ")" });
+              next_fs.css({ left: left, opacity: opacity });
+            },
+            duration: 500,
+            complete: function () {
+              current_fs.hide();
+              animating = false;
+            },
+            easing: "easeOutQuint"
+          }
+        );
+      });
+      $(".previous").click(function () {
+        if (animating) return false;
+        animating = true;
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+        $("#progressbar li")
+          .eq($("fieldset").index(current_fs))
+          .removeClass("active");
+        previous_fs.show();
+        current_fs.animate(
+          { opacity: 0 },
+          {
+            step: function (now, mx) {
+              scale = 0.8 + (1 - now) * 0.2;
+              left = (1 - now) * 50 + "%";
+              opacity = 1 - now;
+              current_fs.css({ left: left });
+              previous_fs.css({
+                transform: "scale(" + scale + ")",
+                opacity: opacity
+              });
+            },
+            duration: 500,
+            complete: function () {
+              current_fs.hide();
+              animating = false;
+            },
+            easing: "easeOutQuint"
+          }
+        );
+      });
+      $(".submit").click(function () {
+        return false;
+      });
+    </script>
+</body>
+</html>
